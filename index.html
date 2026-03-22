@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mamitha's Restarunt | Authentic Flavors</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fas fa-utensils"></i>
+        <span>mamitha's <span class="highlight">restarunt</span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-item">Home</a></li>
+        <li><a href="#menu" class="nav-item">Menu</a></li>
+        <li>
+          <a href="#orders" class="nav-item orders-nav-link" id="ordersNavLink">
+            <i class="fas fa-shopping-bag"></i> Orders
+            <span id="cartCountBadge" class="nav-cart-badge">0</span>
+          </a>
+        </li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+      <div class="cart-icon-mobile" id="mobileCartIcon">
+        <i class="fas fa-shopping-bag"></i>
+        <span id="cartCountMobile">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / Home Section -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>mamitha's <span class="restarunt-name">restarunt</span></h1>
+        <p>Where tradition meets taste — warm spices, rich flavors &amp; unforgettable moments</p>
+        <a href="#menu" class="btn-primary">Explore Menu <i class="fas fa-arrow-down"></i></a>
+      </div>
+    </section>
+
+    <!-- Menu Section (Dynamic categories) -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our <span class="highlight">Signature</span> Menu</h2>
+          <p>Handcrafted dishes made with love and the finest ingredients</p>
+        </div>
+        <div id="menu-container">
+          <!-- categories (Starters, Main Course, Drinks, Desserts) will be injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Orders Section (Cart + WhatsApp) — shown only when Orders tab is clicked -->
+    <section class="orders-section" id="orders">
+      <div class="container orders-layout">
+
+        <!-- LEFT: Order Basket (Cart) -->
+        <div class="cart-panel">
+          <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Order Basket</h3>
+            <button id="clearCartBtn" class="clear-cart-btn"><i class="fas fa-trash-alt"></i> Clear</button>
+          </div>
+          <div id="cart-items-list" class="cart-items">
+            <div class="empty-cart-msg">✨ Your cart is empty. Add some delicious items!</div>
+          </div>
+          <div class="cart-total">
+            <span>Total Amount:</span>
+            <span id="cart-total-price">₹0</span>
+          </div>
+          <button id="whatsappOrderBtn" class="whatsapp-order-btn">
+            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+          </button>
+        </div>
+
+        <!-- RIGHT: Order Summary / Info Column -->
+        <div class="order-info-panel">
+          <h3 class="order-info-title"><i class="fas fa-receipt"></i> Order Summary</h3>
+          <div id="order-summary-list" class="order-summary-list">
+            <div class="order-summary-empty">
+              <i class="fas fa-utensils"></i>
+              <p>No items yet.<br>Browse the menu and add dishes!</p>
+            </div>
+          </div>
+          <div class="order-info-box">
+            <div class="order-info-row">
+              <i class="fas fa-clock"></i>
+              <span>Estimated Delivery: <strong>30–45 mins</strong></span>
+            </div>
+            <div class="order-info-row">
+              <i class="fas fa-motorcycle"></i>
+              <span>Free delivery on orders above <strong>₹500</strong></span>
+            </div>
+            <div class="order-info-row">
+              <i class="fab fa-whatsapp"></i>
+              <span>Order via WhatsApp: <strong>+91 83005 28221</strong></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-wrapper">
+        <div class="contact-info">
+          <h3><i class="fas fa-map-marker-alt"></i> Visit Us</h3>
+          <p>23, Spice Garden Street, Foodie Lane,<br>Chennai - 600001, India</p>
+          <h3><i class="fas fa-phone-alt"></i> Call &amp; Order</h3>
+          <p><a href="tel:+918300528221">+91 83005 28221</a></p>
+          <div class="hours">
+            <i class="far fa-clock"></i> Open daily: 11:00 AM – 11:00 PM
+          </div>
+        </div>
+        <div class="location-card">
+          <i class="fas fa-store"></i>
+          <p>📍 Located near Marina Square | Dine-in &amp; Takeaway</p>
+          <small>Authentic Indian &amp; Continental cuisine</small>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 mamitha's restarunt — crafted with <i class="fas fa-heart"></i> for food lovers</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
