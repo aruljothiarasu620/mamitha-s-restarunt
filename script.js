@@ -225,6 +225,25 @@ function sendWhatsAppOrder() {
     alert("Your cart is empty! Add items before ordering 🍽️");
     return;
   }
+
+  // Validate delivery address
+  const addressInput = document.getElementById('deliveryAddress');
+  const addressError = document.getElementById('address-error');
+  const address = addressInput ? addressInput.value.trim() : '';
+
+  if (!address) {
+    if (addressError) addressError.style.display = 'flex';
+    if (addressInput) {
+      addressInput.focus();
+      addressInput.style.borderColor = '#e74c3c';
+    }
+    return;
+  }
+
+  // Hide error if it was shown
+  if (addressError) addressError.style.display = 'none';
+  if (addressInput) addressInput.style.borderColor = '#25D366';
+
   const phone = "+918300528221";
   let message = "🍽️ *Order from Mamitha's Restarunt* 🍛%0A";
   let orderSummary = "";
@@ -236,7 +255,8 @@ function sendWhatsAppOrder() {
   });
   message += orderSummary;
   message += `%0A💰 *Total: ₹${grandTotal}*%0A`;
-  message += `%0A📍 Pickup/Delivery: As per address%0A🙏 Thank you!`;
+  message += `%0A📍 *Delivery Address:* ${encodeURIComponent(address)}%0A`;
+  message += `%0A🙏 Thank you!`;
   const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
   window.open(whatsappUrl, '_blank');
 }

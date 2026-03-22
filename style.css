@@ -452,6 +452,65 @@ body {
   margin-top: 0.5rem;
 }
 
+/* Delivery Address Box */
+.address-box {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.address-box label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--deep-brown);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.address-box label i {
+  color: var(--primary-orange);
+}
+
+.address-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #f0cfb0;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  color: #3a281e;
+  background: #fffaf5;
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.address-input:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.12);
+}
+
+.address-input::placeholder {
+  color: #c1a48e;
+  font-size: 0.85rem;
+}
+
+.address-error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #e74c3c;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.address-error i {
+  font-size: 0.85rem;
+}
+
 .whatsapp-order-btn {
   background: #25D366;
   width: 100%;

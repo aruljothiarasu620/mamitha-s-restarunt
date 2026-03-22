@@ -75,6 +75,14 @@
             <span>Total Amount:</span>
             <span id="cart-total-price">₹0</span>
           </div>
+
+          <!-- Delivery Address -->
+          <div class="address-box">
+            <label for="deliveryAddress"><i class="fas fa-map-marker-alt"></i> Delivery Address</label>
+            <textarea id="deliveryAddress" class="address-input" rows="3" placeholder="Enter your full delivery address (House no., Street, Area, City...)"></textarea>
+            <p id="address-error" class="address-error" style="display:none;"><i class="fas fa-exclamation-circle"></i> Please enter your delivery address to continue.</p>
+          </div>
+
           <button id="whatsappOrderBtn" class="whatsapp-order-btn">
             <i class="fab fa-whatsapp"></i> Order on WhatsApp
           </button>
